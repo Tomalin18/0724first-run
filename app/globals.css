@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -44,80 +45,80 @@
 }
 
 :root {
-  --radius: 0.5rem;
-  /* PRD Dark Theme Colors - 深色系設計 */
-  --background: #1a1a1a; /* 主色：深灰黑 */
-  --foreground: #ffffff; /* 白色文字 */
-  --card: #2a2a2a; /* 較淺的深色卡片背景 */
-  --card-foreground: #ffffff;
-  --popover: #2a2a2a;
-  --popover-foreground: #ffffff;
-  --primary: #dc2626; /* 次要色：紅色 */
+  --radius: 1rem;
+  /* PRD Tech Future Theme - 科技未來 + 毛玻璃綠色 */
+  --background: #f0f9ff; /* 淺藍白背景 */
+  --foreground: #1e293b; /* 深色文字 */
+  --card: rgba(255, 255, 255, 0.7); /* 毛玻璃卡片 */
+  --card-foreground: #1e293b;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #1e293b;
+  --primary: #10b981; /* 毛玻璃綠色 */
   --primary-foreground: #ffffff;
-  --secondary: #3a3a3a; /* 深灰 */
-  --secondary-foreground: #ffffff;
-  --muted: #2a2a2a;
-  --muted-foreground: #a3a3a3; /* 次要文字色 */
-  --accent: #dc2626;
+  --secondary: rgba(6, 182, 212, 0.1); /* 淺青色背景 */
+  --secondary-foreground: #1e293b;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #06b6d4; /* 青色強調色 */
   --accent-foreground: #ffffff;
-  --destructive: #ef4444; /* 錯誤色 */
-  --border: #3a3a3a; /* 邊框色 */
-  --input: #2a2a2a;
-  --ring: #dc2626;
-  --success: #10b981; /* 成功色 */
-  --warning: #f59e0b; /* 警告色 */
-  --info: #3b82f6; /* 資訊色 */
+  --destructive: #ef4444;
+  --border: rgba(6, 182, 212, 0.2); /* 淺青色邊框 */
+  --input: rgba(255, 255, 255, 0.8);
+  --ring: #10b981;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --info: #06b6d4;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: #2a2a2a;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #dc2626;
+  --sidebar: rgba(255, 255, 255, 0.9);
+  --sidebar-foreground: #1e293b;
+  --sidebar-primary: #10b981;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #3a3a3a;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #3a3a3a;
-  --sidebar-ring: #dc2626;
+  --sidebar-accent: rgba(6, 182, 212, 0.1);
+  --sidebar-accent-foreground: #1e293b;
+  --sidebar-border: rgba(6, 182, 212, 0.2);
+  --sidebar-ring: #10b981;
 }
 
 .dark {
-  /* Use same colors as root for consistency */
-  --background: #1a1a1a;
-  --foreground: #ffffff;
-  --card: #2a2a2a;
-  --card-foreground: #ffffff;
-  --popover: #2a2a2a;
-  --popover-foreground: #ffffff;
-  --primary: #dc2626;
+  /* Same as light theme for consistency - PRD doesn't specify dark mode */
+  --background: #f0f9ff;
+  --foreground: #1e293b;
+  --card: rgba(255, 255, 255, 0.7);
+  --card-foreground: #1e293b;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #1e293b;
+  --primary: #10b981;
   --primary-foreground: #ffffff;
-  --secondary: #3a3a3a;
-  --secondary-foreground: #ffffff;
-  --muted: #2a2a2a;
-  --muted-foreground: #a3a3a3;
-  --accent: #dc2626;
+  --secondary: rgba(6, 182, 212, 0.1);
+  --secondary-foreground: #1e293b;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #06b6d4;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
-  --border: #3a3a3a;
-  --input: #2a2a2a;
-  --ring: #dc2626;
+  --border: rgba(6, 182, 212, 0.2);
+  --input: rgba(255, 255, 255, 0.8);
+  --ring: #10b981;
   --success: #10b981;
   --warning: #f59e0b;
-  --info: #3b82f6;
+  --info: #06b6d4;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: #2a2a2a;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #dc2626;
+  --sidebar: rgba(255, 255, 255, 0.9);
+  --sidebar-foreground: #1e293b;
+  --sidebar-primary: #10b981;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #3a3a3a;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #3a3a3a;
-  --sidebar-ring: #dc2626;
+  --sidebar-accent: rgba(6, 182, 212, 0.1);
+  --sidebar-accent-foreground: #1e293b;
+  --sidebar-border: rgba(6, 182, 212, 0.2);
+  --sidebar-ring: #10b981;
 }
 
 @layer base {
@@ -126,105 +127,273 @@
   }
   
   html {
-    /* Force dark theme colors as specified in PRD */
-    background: #1a1a1a;
-    color: #ffffff;
+    /* PRD Tech Future theme background */
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    min-height: 100%;
   }
   
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+    @apply bg-transparent text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    min-height: 100vh;
+  }
+  
+  /* 手寫風格標題字體 */
+  .handwriting {
+    font-family: 'Caveat', cursive;
   }
 }
 
 @layer components {
-  /* Navigation Bar - PRD 規格 */
+  /* Navigation Bar - PRD Tech Future Style */
   .navbar {
-    @apply h-16 bg-background border-b border-border;
+    @apply h-20 backdrop-blur-sm border-b border-border/30;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
   }
   
-  /* Product Card - PRD 規格 */
-  .product-card {
-    @apply bg-card border border-border rounded-lg p-4 transition-all duration-200;
-    min-width: 240px;
-    max-width: 320px;
+  /* Frosted Glass Card - PRD 毛玻璃效果 */
+  .glass-card {
+    @apply rounded-2xl p-8 transition-all duration-300 hover:scale-105;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 8px 32px rgba(31, 38, 135, 0.37),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
   
-  .product-card:hover {
-    @apply shadow-lg -translate-y-1;
-  }
-  
-  /* Button Styles - PRD 規格 */
+  /* Tech Future Button Styles */
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium transition-all duration-200;
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-full font-medium transition-all duration-300;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    transform: translateY(0);
   }
   
   .btn-primary:hover {
-    @apply brightness-90 -translate-y-0.5 shadow-md;
+    @apply -translate-y-1;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
   }
   
   .btn-secondary {
-    @apply bg-transparent border border-primary text-primary px-6 py-3 rounded-md font-medium transition-all duration-200;
+    @apply bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-full font-medium transition-all duration-300;
+    backdrop-filter: blur(10px);
   }
   
   .btn-secondary:hover {
-    @apply bg-primary text-primary-foreground;
+    @apply bg-primary text-primary-foreground -translate-y-1;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
   }
   
-  /* Input Fields - PRD 規格 */
-  .input-field {
-    @apply h-12 border border-border rounded-md px-4 bg-input text-foreground transition-all duration-200;
+  /* Floating Section Containers */
+  .floating-section {
+    @apply my-24 px-6;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    padding: 4rem 2rem;
+    margin: 6rem auto;
+    max-width: 1200px;
+    position: relative;
   }
   
-  .input-field:focus {
-    @apply outline-none border-blue-500 ring-2 ring-blue-500/20;
+  .floating-section::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #10b981, #06b6d4, #8b5cf6, #10b981);
+    border-radius: 32px;
+    z-index: -1;
+    opacity: 0.3;
   }
   
-  /* Price Display */
-  .price-display {
-    @apply text-primary font-semibold;
-  }
-  
-  /* Status Labels */
-  .status-in-stock {
-    @apply bg-green-500/20 text-green-500 px-2 py-1 rounded text-sm;
-  }
-  
-  .status-out-of-stock {
-    @apply bg-muted text-muted-foreground px-2 py-1 rounded text-sm;
-  }
-  
-  /* Hero Section */
+  /* Hero Section - Tech Future */
   .hero-section {
-    @apply bg-gradient-to-br from-background to-secondary/50 py-16 px-4;
+    @apply relative py-32 px-6 text-center overflow-hidden;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #ecfdf5 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  /* Animation Classes */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+    animation: float 8s ease-in-out infinite;
+    z-index: 0;
+  }
+  
+  /* Tilted Cards for Features */
+  .tilted-card {
+    @apply p-8 rounded-3xl transition-all duration-500 hover:scale-110 hover:rotate-2;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: rotate(-2deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tilted-card:nth-child(even) {
+    transform: rotate(2deg);
+  }
+  
+  .tilted-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Custom Animation Classes */
   .fade-in {
-    animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.8s ease-out;
   }
   
-  .slide-in {
-    animation: slideIn 0.3s ease-out;
+  .slide-in-up {
+    animation: slideInUp 0.6s ease-out;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.6s ease-out;
   }
   
   .scale-in {
-    animation: scaleIn 0.2s ease-out;
+    animation: scaleIn 0.4s ease-out;
+  }
+  
+  .bounce-in {
+    animation: bounceIn 0.8s ease-out;
+  }
+  
+  /* Handwriting Style for Headers */
+  .handwriting-header {
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    @apply text-4xl md:text-6xl text-primary mb-6;
+    text-shadow: 2px 2px 4px rgba(16, 185, 129, 0.2);
+  }
+  
+  /* Tech Grid Background */
+  .tech-grid {
+    background-image: 
+      linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
   }
 }
 
-/* Custom animations */
+/* Tech Future Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes slideIn {
-  from { transform: translateY(10px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+@keyframes slideInUp {
+  from { 
+    transform: translateY(30px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes slideInLeft {
+  from { 
+    transform: translateX(-30px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
+
+@keyframes slideInRight {
+  from { 
+    transform: translateX(30px); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateX(0); 
+    opacity: 1; 
+  }
 }
 
 @keyframes scaleIn {
-  from { transform: scale(0.95); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from { 
+    transform: scale(0.9); 
+    opacity: 0; 
+  }
+  to { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(1deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(-1deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.8);
+  }
 }
