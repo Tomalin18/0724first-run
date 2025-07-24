@@ -1,359 +1,150 @@
-# UI/UX 設計規格文件 - 成人用品電商展示頁面
+Create a complete, maintainable, and optimized Next.js App Router project. The design should be unique and avoid generic AI-generated looks, with custom-designed components that reflect the brand's personality.
 
-## 專案概述
-這是一份專門為 v0.dev 等 UI 生成工具設計的規格文件，僅包含視覺展示和基礎互動功能，不涉及任何後端 API、資料庫連接或身份驗證功能。
+## IMPORTANT: Complete Multi-Page Website Required
+**CRITICAL**: This is a 3-page website. You MUST create ALL 3 pages, not just the first one.
+**Required Pages**: "現代企業官網", "設計師作品集", "生活風格部落格"
+**Navigation**: Implement a complete navigation system that links to all pages.
+**File Structure**: Create separate page files for each page (e.g., app/about/page.tsx, app/contact/page.tsx, etc.)
+**Routing**: Use Next.js App Router conventions for all pages.
 
-## 設計原則
-- **簡潔專業**：深色系設計，營造高端專業形象
-- **隱私導向**：低調的視覺設計，避免過度暴露的圖像
-- **響應式設計**：完美適配手機、平板、桌面裝置
-- **現代美感**：使用現代 UI 元素和流暢動畫
+## Project Structure & Maintainability:
+- **Next.js App Router**: Use the latest App Router conventions with proper file-based routing.
+- **Multi-Page Structure**: Create individual page files for each of the 3 pages.
+- **Modular Components**: Each major section (Hero, Features, Testimonials, etc.) should be its own reusable React component file (e.g., `components/sections/HeroSection.tsx`).
+- **Shared Layout**: Implement a global layout in `app/layout.tsx` with navigation to all pages.
+- **Page Assembly**: Each page should assemble its specific sections in its respective page.tsx file.
+- **UI Components**: Create custom UI components (e.g., custom cards, buttons) in `components/ui/` if they deviate significantly from shadcn/ui defaults.
+- **Utilities**: Use `lib/utils.ts` for helper functions.
+- **Clean Code**: Ensure code is well-organized, readable, and follows best practices for a scalable project.
+- **Assets**: Place images and other static assets in the `public/` directory.
 
-## 頁面清單
+## Brand DNA & Custom Component Style:
+**Overall Style**: 科技未來
+**Color Scheme**: 毛玻璃的綠色
+**Typography**: 手寫風格
+**Spacing & Layout**: 寬鬆
+**Additional Requirements**: 我喜歡網站有許多動畫效果
 
-### 1. 首頁 (Landing Page)
-**目的**：展示品牌形象和精選商品
+**Custom Component Design Rules (Crucial for Uniqueness)**:
+- **NO standard shadcn/ui component look**: Design custom variants for cards, buttons, inputs, etc.
+- **Containers**: Use unique shapes (e.g., floating panels, tilted boxes, layered elements), creative borders, custom shadows, and non-rectangular forms.
+- **Buttons**: Implement distinct designs (e.g., pill shapes, custom hover states, gradient borders, morphing effects).
+- **Typography**: Create a custom hierarchy with varied font weights, sizes, and line heights that reflect the brand.
+- **Spacing**: Break traditional grid patterns; use innovative whitespace and visual rhythm.
+- **Imagery**: Apply unique image treatments (e.g., custom masks, creative overlays, asymmetric crops).
+- **Asymmetry**: Embrace offset elements, varied heights, and creative alignments to avoid a generic feel.
+- **Backgrounds**: Utilize subtle patterns, gradient meshes, or geometric shapes instead of flat colors.
 
-**版面配置**：
-- Hero 區塊：全寬背景圖，中央標題和副標題
-- 精選商品區：4 個商品卡片橫向排列
-- 分類展示區：3 個產品分類大卡片
-- 頁尾：簡約的聯絡資訊
+## Navigation System:
+Create a comprehensive navigation system that includes:
+- **Header Navigation**: Main navigation bar with links to all 3 pages
+- **Mobile Navigation**: Responsive mobile menu for all pages
+- **Footer Navigation**: Footer links to key pages
+- **Active States**: Highlight the current page in navigation
+- **Smooth Transitions**: Add hover and transition effects
 
-**互動元素**：
-- 商品卡片 hover 效果（陰影加深、輕微上移）
-- 「查看更多」按鈕 hover 變色
-- 平滑滾動效果
+## Page 1: 現代企業官網
+**File**: app/現代企業官網/page.tsx (or app/page.tsx for home)
+### Section 1: 透明導航 (navigation)
+Nav: creative menu design, custom hover states, unique mobile menu
+Background: rgba(255, 255, 255, 0.95) with creative treatment
 
-### 2. 商品列表頁 (Product Listing)
-**目的**：展示所有商品的網格視圖
+### Section 2: 漸層主視覺 (hero)
+Creative hero: asymmetric layout, custom button with gradient border, floating elements
+Title: "引領未來的創新企業"
+Subtitle: "我們運用最新技術和創新思維，為客戶創造無限可能"
+Background: #1F2937 with creative treatment
 
-**版面配置**：
-```
-[頂部導航列]
-[頁面標題 - "所有商品"]
-[商品網格]
-  - 桌面：4 列
-  - 平板：3 列
-  - 手機：2 列
-[載入更多按鈕]
-```
+### Section 3: 成就數據 (stats)
+Stats: creative number displays, custom backgrounds, animated counters
+Stats: 4 metrics, creative number displays
+Background: #F8FAFC with creative treatment
 
-**商品卡片設計**：
-- 1:1 正方形商品圖片
-- 商品名稱（最多 2 行，超出顯示...）
-- 價格（NT$ 格式，紅色強調）
-- 「加入購物車」按鈕
-- 庫存狀態標籤（綠色：有貨 / 灰色：缺貨）
+### Section 4: 核心優勢 (features)
+Feature cards: tilted containers, creative icons, varied heights, custom hover effects
+Title: "為什麼選擇我們"
+Subtitle: "專業團隊 × 創新技術 × 優質服務"
+Features (3): 快速響應(Zap), 安全可靠(Shield), 持續創新(Rocket)
+Background: #FFFFFF with creative treatment
 
-**互動效果**：
-- 卡片 hover：陰影效果 + 圖片輕微放大
-- 按鈕 hover：背景色變深
-- 點擊商品圖片或名稱：模擬跳轉效果
+### Section 5: 客戶見證 (testimonials)
+Testimonial design: quote bubbles, creative author layouts, asymmetric cards
+Title: "客戶怎麼說"
+Testimonials (2): Creative quote layouts
+Background: #1F2937 with creative treatment
 
-### 3. 商品詳情頁 (Product Detail)
-**目的**：展示單一商品的詳細資訊
+### Section 6: 行動呼籲 (cta)
+CTA design: morphing button, creative background, unique shape containers
+Title: "準備開始您的數位轉型之旅？"
+Subtitle: "立即聯絡我們，獲得免費諮詢和專業建議"
+Background: #3B82F6 with creative treatment
 
-**版面配置**：
-```
-[導航列]
-[麵包屑導航]
-[左側：商品圖片]
-  - 主圖展示
-  - 縮圖列表（3-4 張）
-[右側：商品資訊]
-  - 商品名稱
-  - 價格
-  - 簡短描述
-  - 數量選擇器
-  - 加入購物車按鈕
-  - 商品詳細說明（可收合）
-```
+### Section 7: 現代頁尾 (footer)
+Footer: creative column layouts, custom dividers, unique link styling
+Background: #111827 with creative treatment
 
-**互動元素**：
-- 圖片切換（點擊縮圖更換主圖）
-- 數量選擇器（+/- 按鈕）
-- 詳細說明展開/收合動畫
-- 加入購物車按鈕動畫效果
+## Page 2: 設計師作品集
+**File**: app/設計師作品集/page.tsx (or app/page.tsx for home)
+### Section 1: 創意導航 (navigation)
+Nav: creative menu design, custom hover states, unique mobile menu
+Background: #FFFFFF with creative treatment
 
-### 4. 購物車頁面 (Shopping Cart)
-**目的**：展示購物車內容
+### Section 2: 設計師介紹 (hero)
+Creative hero: asymmetric layout, custom button with gradient border, floating elements
+Title: "設計改變世界"
+Subtitle: "UI/UX設計師 · 品牌視覺專家"
+Background: #8B5CF6 with creative treatment
 
-**版面配置**：
-```
-[導航列]
-[頁面標題 - "購物車"]
-[購物車表格]
-  - 商品圖片
-  - 商品名稱
-  - 單價
-  - 數量選擇器
-  - 小計
-  - 刪除按鈕
-[購物車摘要]
-  - 商品總計
-  - 運費
-  - 總金額
-[結帳按鈕]
-```
+### Section 3: 設計服務 (features)
+Feature cards: tilted containers, creative icons, varied heights, custom hover effects
+Title: "設計服務"
+Features (3): 品牌設計(Palette), 網站設計(Monitor), App設計(Smartphone)
+Background: #F8FAFC with creative treatment
 
-**互動元素**：
-- 數量即時更新（模擬計算）
-- 刪除商品動畫（淡出效果）
-- 空購物車狀態顯示
+### Section 4: 設計作品 (gallery)
+Gallery: creative grid breaks, custom image masks, floating hover effects
+Title: "精選作品"
+Gallery: 3 images, creative grid layout
+Background: #FFFFFF with creative treatment
 
-### 5. 結帳頁面 (Checkout)
-**目的**：展示結帳流程介面
+## Page 3: 生活風格部落格
+**File**: app/生活風格部落格/page.tsx (or app/page.tsx for home)
+### Section 1: 部落格導航 (navigation)
+Nav: creative menu design, custom hover states, unique mobile menu
+Background: #FFFFFF with creative treatment
 
-**版面配置**：
-```
-[步驟指示器：1.購物車 → 2.填寫資料 → 3.確認訂單]
-[左側：表單區域]
-  - 客戶資訊表單
-    - 姓名
-    - 電話
-    - Email
-  - 7-11 門市選擇
-    - 門市搜尋框
-    - 已選門市顯示
-[右側：訂單摘要]
-  - 商品列表
-  - 金額計算
-  - 確認訂單按鈕
-```
+### Section 2: 部落格標題 (hero)
+Creative hero: asymmetric layout, custom button with gradient border, floating elements
+Title: "生活的美好時光"
+Subtitle: "分享旅行、美食、生活中的點點滴滴"
+Background: #FEF3C7 with creative treatment
 
-**表單設計**：
-- 浮動標籤效果
-- 輸入框 focus 狀態（藍色邊框）
-- 必填欄位標記（紅色星號）
-- 錯誤提示樣式（紅色文字）
+### Section 3: 精選文章 (blog)
+Blog: creative post cards, custom meta layouts, unique image treatments
+Title: "最新文章"
+Blog: 3 posts, creative card layouts
+Background: #FFFFFF with creative treatment
 
-### 6. 訂單確認頁 (Order Confirmation)
-**目的**：展示訂單成功頁面
+### Section 4: 部落格分類 (features)
+Feature cards: tilted containers, creative icons, varied heights, custom hover effects
+Title: "熱門分類"
+Features (4): 旅遊(MapPin), 美食(Coffee), 居家(Home)
+Background: #F9FAFB with creative treatment
 
-**內容設計**：
-- 成功圖示（綠色勾勾）
-- 訂單編號：#2024001234
-- 感謝訊息
-- 訂單摘要卡片
-- 「返回首頁」按鈕
+## Final Creative & Technical Requirements:
+**Multi-Page Completion**: ENSURE ALL 3 PAGES ARE FULLY IMPLEMENTED with their respective sections and content.
+**Technical**: Use shadcn/ui components as a base, but heavily customize their appearance with Tailwind CSS to achieve the unique design. Ensure full responsiveness (mobile-first).
+**Routing**: Implement proper Next.js App Router file structure with working navigation between all pages.
+**Creative Mandate**: Every single component and section must feel hand-crafted and uniquely tailored to the brand, not like a standard template. Focus on innovative visual patterns and interactions.
+**Brand Integration**: Components should embody the brand's personality, story, and style in their design, shapes, and animations.
+**Consistency**: Maintain design consistency across all 3 pages while allowing each page to have its unique character.
+**Avoid**: Generic, off-the-shelf shadcn/ui looks, predictable layouts, and designs that scream 'AI-generated'.
+**Embrace**: Bold creative interpretation, strong brand identity expression, memorable visual moments, and storytelling through design.
 
-## 視覺規格
-
-### 色彩系統
-```css
-主色系：
-- 主色：#1a1a1a (深灰黑)
-- 次要色：#dc2626 (紅色)
-- 背景色：#ffffff (白色)
-- 卡片背景：#f9fafb (淺灰)
-- 邊框色：#e5e7eb
-- 文字色：#111827 (深灰)
-- 次要文字：#6b7280
-
-狀態色彩：
-- 成功：#10b981
-- 警告：#f59e0b
-- 錯誤：#ef4444
-- 資訊：#3b82f6
-```
-
-### 字體系統
-```css
-字體家族：
-- 主要：system-ui, -apple-system, sans-serif
-- 中文：'Noto Sans TC', sans-serif
-
-字體大小：
-- 特大標題：3rem (48px)
-- 大標題：2rem (32px)
-- 標題：1.5rem (24px)
-- 副標題：1.25rem (20px)
-- 正文：1rem (16px)
-- 小字：0.875rem (14px)
-
-字重：
-- 標題：700 (Bold)
-- 強調：600 (Semi-bold)
-- 正文：400 (Regular)
-```
-
-### 間距系統
-```css
-間距單位（8px 基準）：
-- xs: 4px
-- sm: 8px
-- md: 16px
-- lg: 24px
-- xl: 32px
-- 2xl: 48px
-- 3xl: 64px
-
-常用間距：
-- 卡片內邊距：16px
-- 區塊間距：48px
-- 元素間距：16px
-- 按鈕內邊距：12px 24px
-```
-
-### 陰影系統
-```css
-陰影層級：
-- sm: 0 1px 2px rgba(0,0,0,0.05)
-- md: 0 4px 6px rgba(0,0,0,0.1)
-- lg: 0 10px 15px rgba(0,0,0,0.1)
-- xl: 0 20px 25px rgba(0,0,0,0.1)
-```
-
-## 元件規格
-
-### 導航列 (Navigation Bar)
-```
-高度：64px
-背景：#1a1a1a
-內容：
-- Logo（左側）
-- 導航連結（中間）：首頁 | 所有商品 | 關於我們
-- 購物車圖示 + 數量標記（右側）
-手機版：漢堡選單
-```
-
-### 商品卡片 (Product Card)
-```
-尺寸：最小 240px，最大 320px
-圖片比例：1:1
-內邊距：16px
-圓角：8px
-陰影：hover 時顯示
-```
-
-### 按鈕樣式 (Buttons)
-```
-主要按鈕：
-- 背景：#dc2626
-- 文字：白色
-- 圓角：6px
-- 內邊距：12px 24px
-- Hover：背景變深 10%
-
-次要按鈕：
-- 背景：透明
-- 邊框：1px solid #dc2626
-- 文字：#dc2626
-- Hover：背景變成 #dc2626，文字變白
-```
-
-### 輸入框 (Input Fields)
-```
-高度：48px
-邊框：1px solid #e5e7eb
-圓角：6px
-內邊距：12px 16px
-Focus：邊框變藍色 #3b82f6
-```
-
-### 語言切換器 (Language Switcher)
-```
-樣式：下拉選單
-選項：繁體中文 | 简体中文 | Tiếng Việt | English
-位置：導航列中間
-```
-
-## 響應式斷點
-```css
-手機：< 640px
-平板：640px - 1024px
-桌面：> 1024px
-```
-
-## 動畫效果
-```css
-過渡時間：
-- 快速：150ms
-- 正常：300ms
-- 慢速：500ms
-
-動畫函數：
-- ease-in-out（預設）
-- ease-out（元素出現）
-- ease-in（元素消失）
-
-常用動畫：
-- Hover 效果：scale(1.02) + 陰影
-- 載入動畫：骨架屏效果
-- 頁面切換：淡入淡出
-```
-
-## 模擬資料
-
-### 商品資料範例
-```javascript
-products: [
-  {
-    id: 1,
-    name: "經典按摩器",
-    price: 2980,
-    image: "placeholder-product-1.jpg",
-    inStock: true
-  },
-  {
-    id: 2,
-    name: "豪華套裝組合",
-    price: 4580,
-    image: "placeholder-product-2.jpg",
-    inStock: true
-  },
-  {
-    id: 3,
-    name: "入門款商品",
-    price: 1280,
-    image: "placeholder-product-3.jpg",
-    inStock: false
-  }
-]
-```
-
-### 購物車資料範例
-```javascript
-cart: [
-  {
-    id: 1,
-    name: "經典按摩器",
-    price: 2980,
-    quantity: 1,
-    subtotal: 2980
-  },
-  {
-    id: 2,
-    name: "豪華套裝組合", 
-    price: 4580,
-    quantity: 2,
-    subtotal: 9160
-  }
-]
-```
-
-## 注意事項
-
-1. **純展示用途**：所有功能僅為視覺展示，不需實際功能
-2. **假資料**：使用硬編碼的展示資料
-3. **無狀態管理**：頁面間不需要保持狀態
-4. **簡化互動**：僅包含 hover、click 等基礎互動
-5. **圖片佔位**：使用灰色佔位圖或 placeholder 服務
-
-## 交付清單
-
-- [ ] 首頁完整設計
-- [ ] 商品列表頁（含 8-12 個展示商品）
-- [ ] 商品詳情頁（單一商品展示）
-- [ ] 購物車頁面（含 2-3 個商品）
-- [ ] 結帳頁面（表單設計）
-- [ ] 訂單確認頁
-- [ ] 響應式設計（手機、平板、桌面）
-- [ ] 基礎互動效果（hover、點擊）
-
----
-
-**文件版本**：1.0  
-**用途**：v0.dev UI 生成  
-**最後更新**：2025-07-17
+## Delivery Checklist:
+□ All 3 pages created with proper file structure
+□ Working navigation system linking all pages
+□ Responsive design across all pages
+□ Custom-styled components (not generic shadcn/ui)
+□ Brand-consistent design across all pages
+□ Proper Next.js App Router implementation
